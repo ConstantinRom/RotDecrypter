@@ -33,8 +33,8 @@
             this.CryptButton = new System.Windows.Forms.Button();
             this.numbersBox1 = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.outputTextBox2 = new System.Windows.Forms.RichTextBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.outputTextBox2 = new System.Windows.Forms.RichTextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -77,15 +77,6 @@
             this.panel1.Size = new System.Drawing.Size(538, 32);
             this.panel1.TabIndex = 5;
             // 
-            // outputTextBox2
-            // 
-            this.outputTextBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.outputTextBox2.Location = new System.Drawing.Point(0, 174);
-            this.outputTextBox2.Name = "outputTextBox2";
-            this.outputTextBox2.Size = new System.Drawing.Size(538, 168);
-            this.outputTextBox2.TabIndex = 6;
-            this.outputTextBox2.Text = "";
-            // 
             // linkLabel1
             // 
             this.linkLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -97,6 +88,15 @@
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "About";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
+            // outputTextBox2
+            // 
+            this.outputTextBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.outputTextBox2.Location = new System.Drawing.Point(0, 174);
+            this.outputTextBox2.Name = "outputTextBox2";
+            this.outputTextBox2.Size = new System.Drawing.Size(538, 168);
+            this.outputTextBox2.TabIndex = 6;
+            this.outputTextBox2.Text = "";
             // 
             // Form1
             // 
