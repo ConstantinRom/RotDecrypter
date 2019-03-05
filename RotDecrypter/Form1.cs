@@ -39,24 +39,37 @@ namespace RotDecrypter
             {
                 numbersBox1.Items.Add(i);
                 
-            }
-
+            }      
+            numbersBox1.Items.Add("inverse");
             numbersBox1.SelectedIndex = 0;
 
 
         }
 
 
-        static string Encrypt(string toEncrypt, int shift)
+        static string Encrypt(string toEncrypt, string shiftstr)
         {
             
             const int alphabetLength = 'z' - 'a' + 1;
             char[] buffer = toEncrypt.ToCharArray();
 
+
+            if (shiftstr.ToString().Equals("inverse"))
+            {
+                Array.Reverse(buffer);
+                return new string(buffer);
+            }
+
+
+           
+
             for (int i = 0; i < buffer.Length; i++)
             {
-                if (!Char.IsNumber(buffer[i]) && !buffer[i].Equals('\n') && !buffer[i].Equals(' '))
+
+              if (!Char.IsNumber(buffer[i]) && !buffer[i].Equals('\n') && !buffer[i].Equals(' '))
                 {
+                    int shift = Convert.ToInt32(shiftstr);
+
                     if (Char.IsUpper(buffer[i]))
                     {
                         char letter = (char)(buffer[i] - 'A');
@@ -82,7 +95,7 @@ namespace RotDecrypter
 
         private void button1_Click(object sender, EventArgs e)
         {
-            outputTextBox2.Text = Encrypt(inputTextBox.Text,(int)numbersBox1.SelectedItem);
+            outputTextBox2.Text = Encrypt(inputTextBox.Text,(string)numbersBox1.SelectedItem.ToString());
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
