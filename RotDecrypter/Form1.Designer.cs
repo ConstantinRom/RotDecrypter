@@ -28,68 +28,105 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            this.inputTextBox = new System.Windows.Forms.RichTextBox();
+            this.CryptButton = new System.Windows.Forms.Button();
+            this.numbersBox1 = new System.Windows.Forms.ComboBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.outputTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // richTextBox1
+            // inputTextBox
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(12, 1);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(776, 177);
-            this.richTextBox1.TabIndex = 0;
-            this.richTextBox1.Text = "";
+            this.inputTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.inputTextBox.Location = new System.Drawing.Point(0, 0);
+            this.inputTextBox.Name = "inputTextBox";
+            this.inputTextBox.Size = new System.Drawing.Size(538, 168);
+            this.inputTextBox.TabIndex = 0;
+            this.inputTextBox.Text = "";
             // 
-            // richTextBox2
+            // CryptButton
             // 
-            this.richTextBox2.Location = new System.Drawing.Point(12, 184);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(776, 177);
-            this.richTextBox2.TabIndex = 1;
-            this.richTextBox2.Text = "";
+            this.CryptButton.Location = new System.Drawing.Point(179, 3);
+            this.CryptButton.Name = "CryptButton";
+            this.CryptButton.Size = new System.Drawing.Size(93, 23);
+            this.CryptButton.TabIndex = 2;
+            this.CryptButton.Text = "Decrypt/Encrypt";
+            this.CryptButton.UseVisualStyleBackColor = true;
+            this.CryptButton.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button1
+            // numbersBox1
             // 
-            this.button1.Location = new System.Drawing.Point(143, 364);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(93, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Decrypt/Encrypt";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.numbersBox1.FormattingEnabled = true;
+            this.numbersBox1.Location = new System.Drawing.Point(3, 3);
+            this.numbersBox1.Name = "numbersBox1";
+            this.numbersBox1.Size = new System.Drawing.Size(170, 21);
+            this.numbersBox1.TabIndex = 3;
             // 
-            // comboBox1
+            // panel1
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(12, 366);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(125, 21);
-            this.comboBox1.TabIndex = 3;
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.linkLabel1);
+            this.panel1.Controls.Add(this.numbersBox1);
+            this.panel1.Controls.Add(this.CryptButton);
+            this.panel1.Location = new System.Drawing.Point(0, 353);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(538, 32);
+            this.panel1.TabIndex = 5;
+            // 
+            // outputTextBox2
+            // 
+            this.outputTextBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.outputTextBox2.Location = new System.Drawing.Point(0, 174);
+            this.outputTextBox2.Name = "outputTextBox2";
+            this.outputTextBox2.Size = new System.Drawing.Size(538, 168);
+            this.outputTextBox2.TabIndex = 6;
+            this.outputTextBox2.Text = "";
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(500, 8);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(35, 13);
+            this.linkLabel1.TabIndex = 4;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "About";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.richTextBox2);
-            this.Controls.Add(this.richTextBox1);
+            this.ClientSize = new System.Drawing.Size(537, 385);
+            this.Controls.Add(this.outputTextBox2);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.inputTextBox);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimumSize = new System.Drawing.Size(553, 423);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Rot Decrypter";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.RichTextBox richTextBox2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.RichTextBox inputTextBox;
+        private System.Windows.Forms.Button CryptButton;
+        private System.Windows.Forms.ComboBox numbersBox1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.RichTextBox outputTextBox2;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
+
+
 }
 

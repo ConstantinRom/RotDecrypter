@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // Allgemeine Informationen über eine Assembly werden über die folgenden
 // Attribute gesteuert. Ändern Sie diese Attributwerte, um die Informationen zu ändern,
 // die einer Assembly zugeordnet sind.
-[assembly: AssemblyTitle("RotDecrypter")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Rot Decrypter")]
+[assembly: AssemblyDescription("Tool to Encrypt or Decrypt ROT")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("RotDecrypter")]
-[assembly: AssemblyCopyright("Copyright ©  2019")]
+[assembly: AssemblyProduct("Rot Decrypter")]
+[assembly: AssemblyCopyright("OPEN SOURCE")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

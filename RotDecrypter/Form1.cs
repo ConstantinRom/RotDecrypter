@@ -12,22 +12,36 @@ namespace RotDecrypter
 {
     public partial class Form1 : Form
     {
+        protected override void OnResize(EventArgs e)
+        {
+            base.OnResize(e);
+
+
+            var height= ClientRectangle.Height / 2 -20;
+            inputTextBox.Top = 0;
+            inputTextBox.Height = height - 5;
+            outputTextBox2.Top = height + 5;
+            outputTextBox2.Height = height - 5;
+
+        }
         public Form1()
         {
             InitializeComponent();
+            numbersBox1.DropDownStyle = ComboBoxStyle.DropDownList;
+            outputTextBox2.ReadOnly = true;
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
+            
 
             for (int i = 1; i < 27; i++)
             {
-                comboBox1.Items.Add(i);
+                numbersBox1.Items.Add(i);
                 
             }
 
-            comboBox1.SelectedIndex = 0;
+            numbersBox1.SelectedIndex = 0;
 
 
         }
@@ -52,10 +66,12 @@ namespace RotDecrypter
 
                     else
                     {
-                        char letter = (char)(buffer[i] - 'a'); // Let the `letter` be an offset from 'a'
+                        char letter = (char)(buffer[i] - 'a'); 
                         letter = (char)((letter + shift) % alphabetLength);
                         buffer[i] = (char)(letter + 'a');
                     }
+
+                  
                   
                 }
 
@@ -66,7 +82,13 @@ namespace RotDecrypter
 
         private void button1_Click(object sender, EventArgs e)
         {
-            richTextBox2.Text = Encrypt(richTextBox1.Text,(int)comboBox1.SelectedItem);
+            outputTextBox2.Text = Encrypt(inputTextBox.Text,(int)numbersBox1.SelectedItem);
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            AboutBox1 ab = new AboutBox1();
+            ab.ShowDialog();
         }
     }
 }
