@@ -27,12 +27,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_FC95FECF3A264ACEBD34A34CC9F3B7DF"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_4B2C694494AB4084B40BA9C1E24D1E40"
         "MsmSig" = "8:_UNDEFINED"
@@ -68,6 +62,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.6.1"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.6.1 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.6.1"
+                    }
+                }
             }
         }
         "Release"
@@ -92,6 +94,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.6.1"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.6.1 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.6.1"
+                    }
+                }
             }
         }
     }
@@ -153,26 +163,6 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_FC95FECF3A264ACEBD34A34CC9F3B7DF"
-            {
-            "SourcePath" = "8:..\\RotDecrypter\\RotDecrypter.ico"
-            "TargetName" = "8:RotDecrypter.ico"
-            "Tag" = "8:"
-            "Folder" = "8:_CD89B5A4C5504043A6C995F9DC627D5C"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
         }
         "FileType"
         {
@@ -230,7 +220,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Rot Decrypter"
         "ProductCode" = "8:{BA77DA3F-D625-4119-AB48-94E0607BCEA1}"
-        "PackageCode" = "8:{DA40E92B-3E83-4FE6-B7BF-F2881B5FBD4A}"
+        "PackageCode" = "8:{57FF567E-13E0-48A9-BA4C-B427DF733B13}"
         "UpgradeCode" = "8:{C1E31D97-3AB4-4683-B710-9E732CF43A5C}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -247,7 +237,7 @@
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:Program to Encrypt or Decrypt ROT"
         "ARPURLINFOABOUT" = "8: "
-        "ARPPRODUCTICON" = "8:_FC95FECF3A264ACEBD34A34CC9F3B7DF"
+        "ARPPRODUCTICON" = "8:"
         "ARPIconIndex" = "3:0"
         "SearchPath" = "8:"
         "UseSystemSearchPath" = "11:TRUE"
@@ -361,10 +351,10 @@
             "Target" = "8:_4B2C694494AB4084B40BA9C1E24D1E40"
             "Folder" = "8:_C9ED4368B62C49A38496B606E019EFB1"
             "WorkingFolder" = "8:_CD89B5A4C5504043A6C995F9DC627D5C"
-            "Icon" = "8:_FC95FECF3A264ACEBD34A34CC9F3B7DF"
+            "Icon" = "8:"
             "Feature" = "8:"
             }
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_E309BB4815D847B99DA45C6611EA5A2D"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_F9CB1021ABB54349A4382752BE4AFF59"
             {
             "Name" = "8:Rot Decrypter"
             "Arguments" = "8:"
@@ -372,10 +362,10 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_FC95FECF3A264ACEBD34A34CC9F3B7DF"
+            "Target" = "8:_4B2C694494AB4084B40BA9C1E24D1E40"
             "Folder" = "8:_0AAE55F089204CA5977449A1E2582EFA"
             "WorkingFolder" = "8:_CD89B5A4C5504043A6C995F9DC627D5C"
-            "Icon" = "8:_FC95FECF3A264ACEBD34A34CC9F3B7DF"
+            "Icon" = "8:"
             "Feature" = "8:"
             }
         }
@@ -779,7 +769,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_4B2C694494AB4084B40BA9C1E24D1E40"
             {
-            "SourcePath" = "8:..\\RotDecrypter\\obj\\Release\\RotDecrypter.exe"
+            "SourcePath" = "8:..\\RotDecrypter\\obj\\Debug\\RotDecrypter.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_CD89B5A4C5504043A6C995F9DC627D5C"
