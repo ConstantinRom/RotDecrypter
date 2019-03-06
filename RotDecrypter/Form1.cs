@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+
 
 namespace RotDecrypter
 {
@@ -28,7 +30,12 @@ namespace RotDecrypter
         {
             InitializeComponent();
             numbersBox1.DropDownStyle = ComboBoxStyle.DropDownList;
-            outputTextBox2.ReadOnly = true;
+           
+   
+            openFileDialog1.Filter = "Supported Files|*.rtf;*.txt;*.md;*.csv|Text Files (*.txt)|*.txt|RTF Files (*.rtf)|*.rtf|md Files (*.md)|*.md|CSV Files (*.csv)|*.csv|All files (*.*)|*.*";
+            openFileDialog1.Multiselect = false;
+            saveFileDialog1.Filter= "Supported Files|*.rtf;*.txt;*.md;*.csv|Text Files (*.txt)|*.txt|RTF Files (*.rtf)|*.rtf|md Files (*.md)|*.md|CSV Files (*.csv)|*.csv";
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -45,63 +52,115 @@ namespace RotDecrypter
 
 
         }
-
-
-        static string Encrypt(string toEncrypt, string shiftstr)
-        {
-            
-            const int alphabetLength = 'z' - 'a' + 1;
-            char[] buffer = toEncrypt.ToCharArray();
-
-
-            if (shiftstr.ToString().Equals("inverse"))
-            {
-                Array.Reverse(buffer);
-                return new string(buffer);
-            }
-
-
-           
-
-            for (int i = 0; i < buffer.Length; i++)
-            {
-
-              if (!Char.IsNumber(buffer[i]) && !buffer[i].Equals('\n') && !buffer[i].Equals(' '))
-                {
-                    int shift = Convert.ToInt32(shiftstr);
-
-                    if (Char.IsUpper(buffer[i]))
-                    {
-                        char letter = (char)(buffer[i] - 'A');
-                        letter = (char)((letter + shift) % alphabetLength);
-                        buffer[i] = (char)(letter + 'A');
-                    }
-
-                    else
-                    {
-                        char letter = (char)(buffer[i] - 'a'); 
-                        letter = (char)((letter + shift) % alphabetLength);
-                        buffer[i] = (char)(letter + 'a');
-                    }
-
-                  
-                  
-                }
-
-               
-            }
-            return new string(buffer);
-        }
-
+        
         private void button1_Click(object sender, EventArgs e)
         {
-            outputTextBox2.Text = Encrypt(inputTextBox.Text,(string)numbersBox1.SelectedItem.ToString());
+            outputTextBox2.Text = Crypter.Encrypt(inputTextBox.Text,(string)numbersBox1.SelectedItem.ToString());
         }
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+     
+
+        private void aboutmenuitem_Click(object sender, EventArgs e)
         {
             AboutBox1 ab = new AboutBox1();
             ab.ShowDialog();
+        }
+
+        private void openmenuitem_Click(object sender, EventArgs e)
+        {
+
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                string ext = Path.GetExtension(openFileDialog1.FileName);
+
+                string readedtxt = File.ReadAllText(openFileDialog1.FileName);
+
+
+                if (ext.Equals(".rtf".ToLower()))
+                {
+                    
+                    inputTextBox.Rtf = readedtxt;
+                }
+
+                else
+                {
+                    inputTextBox.Text = readedtxt;
+                }
+                
+
+            }
+                
+
+        }
+
+        private void outputTextBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void editablebemenuitem_Click(object sender, EventArgs e)
+        {
+            if(editablebemenuitem.Checked == true)
+            {
+                editablebemenuitem.Checked = false;
+                outputTextBox2.ReadOnly=true;
+
+                
+            }
+
+            else
+            {
+                editablebemenuitem.Checked = true;
+                outputTextBox2.ReadOnly = false;
+
+
+            }
+           
+
+        }
+
+        private void exitmenuItem_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
+        }
+
+        private void savemenuItem_Click(object sender, EventArgs e)
+        {
+            if(saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+              FileStream file = File.Create(saveFileDialog1.FileName);
+              file.Close();
+                
+                string ext = Path.GetExtension(saveFileDialog1.FileName);
+
+                if (ext.Equals(".rtf".ToLower()))
+                {
+
+                File.WriteAllText(saveFileDialog1.FileName,outputTextBox2.Rtf);
+                }
+
+                else
+                { 
+                File.WriteAllText(saveFileDialog1.FileName,outputTextBox2.Text);
+
+                }
+            }
+
+        }
+
+        private void aendernmenuItem_Click(object sender, EventArgs e)
+        {
+            if(fontDialog1.ShowDialog() == DialogResult.OK)
+            {
+                outputTextBox2.Font = fontDialog1.Font;
+                inputTextBox.Font = fontDialog1.Font;
+            }
+        }
+
+        private void menuItem6_Click(object sender, EventArgs e)
+        {
+           outputTextBox2.Font = RichTextBox.DefaultFont;
+           inputTextBox.Font = RichTextBox.DefaultFont;
         }
     }
 }
