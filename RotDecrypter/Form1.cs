@@ -30,7 +30,7 @@ namespace RotDecrypter
         {
             InitializeComponent();
             numbersBox1.DropDownStyle = ComboBoxStyle.DropDownList;
-           
+            outputTextBox2.ReadOnly = true;
    
             openFileDialog1.Filter = "Supported Files|*.rtf;*.txt;*.md;*.csv|Text Files (*.txt)|*.txt|RTF Files (*.rtf)|*.rtf|md Files (*.md)|*.md|CSV Files (*.csv)|*.csv|All files (*.*)|*.*";
             openFileDialog1.Multiselect = false;

@@ -163,7 +163,6 @@
             // 
             // editablebemenuitem
             // 
-            this.editablebemenuitem.Checked = true;
             this.editablebemenuitem.Index = 1;
             this.editablebemenuitem.Text = "Edit";
             this.editablebemenuitem.Click += new System.EventHandler(this.editablebemenuitem_Click);
