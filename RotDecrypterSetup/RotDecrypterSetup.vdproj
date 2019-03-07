@@ -34,13 +34,13 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_2C061559E75D059033608E9EC0962FCE"
+        "OwnerKey" = "8:_0AECC3F4297940E3BADF9C04EB5CD634"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_0AECC3F4297940E3BADF9C04EB5CD634"
+        "OwnerKey" = "8:_2C061559E75D059033608E9EC0962FCE"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -245,15 +245,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Rot Decrypter"
-        "ProductCode" = "8:{BA77DA3F-D625-4119-AB48-94E0607BCEA1}"
-        "PackageCode" = "8:{57FF567E-13E0-48A9-BA4C-B427DF733B13}"
+        "ProductCode" = "8:{33888390-60A4-4D9B-BEF9-A5A40B8DB4F0}"
+        "PackageCode" = "8:{2D0B1B4A-63AE-4F0E-B731-363A94BAFD35}"
         "UpgradeCode" = "8:{C1E31D97-3AB4-4683-B710-9E732CF43A5C}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:FALSE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:TRUE"
-        "ProductVersion" = "8:1.0.0"
+        "ProductVersion" = "8:1.1.0"
         "Manufacturer" = "8: "
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
