@@ -34,7 +34,7 @@ namespace RotDecrypter
    
             openFileDialog1.Filter = "Supported Files|*.rtf;*.txt;*.md;*.csv|Text Files (*.txt)|*.txt|RTF Files (*.rtf)|*.rtf|md Files (*.md)|*.md|CSV Files (*.csv)|*.csv|All files (*.*)|*.*";
             openFileDialog1.Multiselect = false;
-            saveFileDialog1.Filter= "Supported Files|*.rtf;*.txt;*.md;*.csv|Text Files (*.txt)|*.txt|RTF Files (*.rtf)|*.rtf|md Files (*.md)|*.md|CSV Files (*.csv)|*.csv";
+            saveFileDialog1.Filter= "Text Files (*.txt)|*.txt|RTF Files (*.rtf)|*.rtf|md Files (*.md)|*.md|CSV Files (*.csv)|*.csv";
 
         }
 
